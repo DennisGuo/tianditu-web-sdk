@@ -1,0 +1,28 @@
+{
+  "result": {
+    "formatted_address": "北京市西城区什刹海街道西什库大街19号院",
+    "location": {
+      "lon": 116.37304,
+      "lat": 39.92594
+    },
+    "addressComponent": {
+      "address": "西什库大街19号院",
+      "city": "",
+      "county_code": "156110102",
+      "nation": "中国",
+      "poi_position": "西南",
+      "county": "西城区",
+      "city_code": "156110100",
+      "address_position": "西南",
+      "poi": "西什库大街19号院",
+      "province_code": "156110000",
+      "province": "北京市",
+      "road": "大红罗厂街",
+      "road_distance": 49,
+      "poi_distance": 21,
+      "address_distance": 21
+    }
+  },
+  "msg": "ok",
+  "status": "0"
+}

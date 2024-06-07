@@ -1,0 +1,112 @@
+{
+  "count": "8398",
+  "resultType": 1,
+  "pois": [
+    {
+      "address": "重庆市涪陵区",
+      "phone": "",
+      "poiType": "101",
+      "name": "酒店",
+      "source": "0",
+      "hotPointID": "5170648779C7B755",
+      "lonlat": "107.337470,29.646715"
+    },
+    {
+      "address": "大众街48正北方向190米",
+      "phone": "",
+      "poiType": "101",
+      "name": "爱家酒店",
+      "source": "0",
+      "hotPointID": "817E65879AB36A44",
+      "lonlat": "107.512480,30.741630"
+    },
+    {
+      "address": "先锋路77",
+      "phone": "023-43711111",
+      "poiType": "101",
+      "name": "广场酒店",
+      "source": "0",
+      "hotPointID": "809E6080C3D32D81",
+      "lonlat": "105.715830,29.708869"
+    },
+    {
+      "address": "棠香街道佛都大道1135号",
+      "phone": "023-85227088",
+      "poiType": "101",
+      "name": "芳菲酒店",
+      "source": "0",
+      "hotPointID": "C1B2000778FC152B",
+      "lonlat": "105.737573,29.683897"
+    },
+    {
+      "address": "白马路153~155",
+      "phone": "",
+      "poiType": "101",
+      "name": "金茂酒店",
+      "source": "0",
+      "hotPointID": "91A021056B17CAE1",
+      "lonlat": "108.763550,31.006500"
+    },
+    {
+      "address": "桃源西一路151号附7号",
+      "phone": "023-81880222",
+      "poiType": "101",
+      "name": "桃源酒店",
+      "source": "0",
+      "hotPointID": "C14A61017BE40CFB",
+      "lonlat": "107.071319,29.861845"
+    },
+    {
+      "address": "中国邮政储蓄银行北",
+      "phone": "15215230758",
+      "poiType": "101",
+      "name": "绿野酒店",
+      "source": "0",
+      "hotPointID": "800C21830FEA58A6",
+      "lonlat": "107.539720,30.592620"
+    },
+    {
+      "address": "裕安街7",
+      "phone": "18182321858",
+      "poiType": "101",
+      "name": "如家酒店",
+      "source": "0",
+      "hotPointID": "108440070053E30A",
+      "lonlat": "108.377624,31.158429"
+    },
+    {
+      "address": "文苑大道1号附5号",
+      "phone": "023-81883636",
+      "poiType": "101",
+      "name": "EQ酒店",
+      "source": "0",
+      "hotPointID": "50282103518631E8",
+      "lonlat": "107.085280,29.855500"
+    },
+    {
+      "address": "重庆市江津区",
+      "phone": "023-47618486",
+      "poiType": "101",
+      "name": "顺风酒店",
+      "source": "0",
+      "hotPointID": "50DC6107A3B63708",
+      "lonlat": "106.271550,29.153560"
+    }
+  ],
+  "prompt": [
+    {
+      "type": 4,
+      "admins": [
+        {
+          "adminName": "重庆市",
+          "adminCode": 156500000
+        }
+      ]
+    }
+  ],
+  "status": {
+    "cndesc": "服务正常",
+    "infocode": 1000
+  },
+  "keyWord": "酒店"
+}
