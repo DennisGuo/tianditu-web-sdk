@@ -1,11 +1,16 @@
 package cn.ghx.tianditu.common;
 
 import cn.ghx.tianditu.TiandituService;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 import java.io.IOException;
 
@@ -18,7 +23,9 @@ public class BaseService {
     /**
      * gson 转换 json 字符串 和 对象
      */
-    protected Gson gson = new Gson();
+    protected Gson gson = new GsonBuilder()
+            .registerTypeAdapter(Integer.class, new IntegerAdapter())
+            .create();
     /**
      * http 客户端
      */
@@ -50,7 +57,37 @@ public class BaseService {
             assert response.body() != null;
             String body = response.body().string();
             log.trace("response = {}", body);
-            return gson.fromJson(body, clazz);
+
+            // 异常处理
+            String contentType = response.header("Content-Type");
+            log.trace("response[Content-Type] = {}", contentType);
+            assert contentType != null;
+            if (contentType.contains("json")) {
+                JsonObject obj = gson.fromJson(body, JsonObject.class);
+                if (obj.has("code") && obj.get("code").getAsInt() != 0) {
+                    throw new TiandituException(body);
+                }
+                return gson.fromJson(body, clazz);
+            } else if (body.startsWith("<?xml")) {
+                XmlMapper mapper = new XmlMapper();
+                mapper.configure(FromXmlParser.Feature.EMPTY_ELEMENT_AS_NULL, true);
+                return mapper.readValue(body, clazz);
+            }
+            return (T) body;
+        }
+    }
+
+    public byte[] requestBytes(String uri) throws IOException {
+        String url = TiandituService.URI + uri + "&tk=" + tk;
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+        try (Response response = client.newCall(request).execute()) {
+            ResponseBody body = response.body();
+            if (body == null) {
+                throw new TiandituException("Body is null.");
+            }
+            return body.bytes();
         }
     }
 }

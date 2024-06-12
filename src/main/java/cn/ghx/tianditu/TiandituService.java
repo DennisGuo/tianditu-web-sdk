@@ -1,6 +1,10 @@
 package cn.ghx.tianditu;
 
+import cn.ghx.tianditu.administrative.AdministrativeService;
+import cn.ghx.tianditu.bus.BusService;
 import cn.ghx.tianditu.coder.GeoCoderService;
+import cn.ghx.tianditu.drive.DriveService;
+import cn.ghx.tianditu.image.StaticImageService;
 import cn.ghx.tianditu.place.PlaceSearchService;
 import org.slf4j.simple.SimpleLogger;
 
@@ -51,5 +55,41 @@ public class TiandituService {
      */
     public GeoCoderService getGeoCoderService() {
         return new GeoCoderService(tk);
+    }
+
+    /**
+     * 行政区划服务V2.0
+     *
+     * @return
+     */
+    public AdministrativeService getAdministrativeService() {
+        return new AdministrativeService(tk);
+    }
+
+    /**
+     * 驾车规划服务
+     *
+     * @return
+     */
+    public DriveService getDriveServiceService() {
+        return new DriveService(tk);
+    }
+
+    /**
+     * 静态地图API
+     *
+     * @return
+     */
+    public StaticImageService getStaticImageService() {
+        return new StaticImageService(tk);
+    }
+
+    /**
+     * 公交规划服务
+     *
+     * @return
+     */
+    public BusService getBusService() {
+        return new BusService(tk);
     }
 }
