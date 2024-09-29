@@ -3,6 +3,7 @@ package cn.ghx.tianditu.place.data;
 import cn.ghx.tianditu.common.data.PriorityCity;
 import cn.ghx.tianditu.common.data.PriorityProvince;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * 针对统计（类型2）集合返回
  */
 @Data
+@NoArgsConstructor
 public class PlaceStatistic {
 
     /**

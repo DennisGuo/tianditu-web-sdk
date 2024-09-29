@@ -108,6 +108,7 @@ class TiandituServiceTest {
 
         AdministrativeParams params = new AdministrativeParams();
         params.setKeyword("重庆市");
+        params.setChildLevel(3);
         AdministrativeResult res = service.getAdministrativeService().getAdministrative(params);
         print(res);
     }

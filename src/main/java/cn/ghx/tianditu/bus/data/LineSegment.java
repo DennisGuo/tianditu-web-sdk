@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.util.List;
 
+/**
+ * 线路段
+ */
 @Data
 public class LineSegment {
     /**

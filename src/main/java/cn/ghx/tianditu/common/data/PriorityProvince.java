@@ -1,11 +1,13 @@
 package cn.ghx.tianditu.common.data;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 各省包含信息
  */
 @Data
+@NoArgsConstructor
 public class PriorityProvince {
 
     /**

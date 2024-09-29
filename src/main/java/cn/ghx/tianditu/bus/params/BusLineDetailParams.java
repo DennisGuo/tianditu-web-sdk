@@ -1,8 +1,13 @@
 package cn.ghx.tianditu.bus.params;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+/**
+ * 查询公交站点换成参数
+ */
 @Data
+@NoArgsConstructor
 public class BusLineDetailParams {
     /**
      * docid

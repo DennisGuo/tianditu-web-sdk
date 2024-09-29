@@ -1,10 +1,15 @@
 package cn.ghx.tianditu.bus.data;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * 公交线路详情
+ */
 @Data
+@NoArgsConstructor
 public class BusLineDetail {
     /**
      * 单条公交规划结果所有线路名称

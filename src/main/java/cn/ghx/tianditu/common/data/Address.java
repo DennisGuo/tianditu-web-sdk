@@ -1,8 +1,13 @@
 package cn.ghx.tianditu.common.data;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+/**
+ * 地址对象
+ */
 @Data
+@NoArgsConstructor
 public class Address {
 
     /**

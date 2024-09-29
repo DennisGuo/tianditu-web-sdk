@@ -3,6 +3,9 @@ package cn.ghx.tianditu.common.data;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * 地址详情
+ */
 @NoArgsConstructor
 @Data
 public class AddressDetail {

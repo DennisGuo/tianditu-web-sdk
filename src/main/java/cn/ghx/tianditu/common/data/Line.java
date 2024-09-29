@@ -1,11 +1,13 @@
 package cn.ghx.tianditu.common.data;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 线路
  */
 @Data
+@NoArgsConstructor
 public class Line {
     /**
      * 站数量 	String 	必返回

@@ -17,6 +17,12 @@ public class StaticImageService extends BaseService {
         super(tk);
     }
 
+    /**
+     * 获取图片
+     * @param params    StaticImageParams
+     * @return 图片的字节数组
+     * @throws IOException 异常
+     */
     public byte[] getImage(StaticImageParams params) throws IOException {
 
         List<String> list = new ArrayList<>();

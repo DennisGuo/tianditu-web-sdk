@@ -3,6 +3,9 @@ package cn.ghx.tianditu.common.data;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * 经纬度地址
+ */
 @NoArgsConstructor
 @Data
 public class Location {

@@ -5,6 +5,7 @@ import cn.ghx.tianditu.common.data.Line;
 import cn.ghx.tianditu.common.data.Poi;
 import cn.ghx.tianditu.common.data.Status;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ import java.util.List;
  * 地名搜索V2.0 返回结果基类
  */
 @Data
+@NoArgsConstructor
 public class PlaceSearchResult {
     /**
      * 返回结果类型 : 取值1-5，对应不同的响应类型：

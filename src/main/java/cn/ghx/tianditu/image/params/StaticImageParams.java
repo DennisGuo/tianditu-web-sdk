@@ -1,8 +1,13 @@
 package cn.ghx.tianditu.image.params;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+/**
+ * 获取静态图片的参数
+ */
 @Data
+@NoArgsConstructor
 public class StaticImageParams {
     /**
      * 图片宽度

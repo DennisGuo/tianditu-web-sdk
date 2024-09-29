@@ -1,11 +1,13 @@
 package cn.ghx.tianditu.bus.params;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 公交规划请求参数
  */
 @Data
+@NoArgsConstructor
 public class BusLineParams {
     /**
      * 出发点坐标 “经度，纬度” 		String

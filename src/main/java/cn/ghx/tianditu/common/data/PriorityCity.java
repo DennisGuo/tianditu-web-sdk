@@ -1,11 +1,13 @@
 package cn.ghx.tianditu.common.data;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 推荐行政区
  */
 @Data
+@NoArgsConstructor
 public class PriorityCity {
     /**
      * 行政区名称 	String 	必返回

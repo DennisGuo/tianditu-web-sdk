@@ -35,7 +35,10 @@ public class BaseService {
      */
     private String tk;
 
-
+    /**
+     * 构造函数
+     * @param tk 天地图密钥
+     */
     public BaseService(String tk) {
         this.tk = tk;
     }
@@ -45,7 +48,8 @@ public class BaseService {
      *
      * @param uri   接口路径
      * @param clazz 返回的内容对象封装
-     * @return
+     * @return 结果对象
+     * @throws IOException 异常
      */
     protected <T> T request(String uri, Class<T> clazz) throws IOException {
         String url = TiandituService.URI + uri + "&tk=" + tk;
@@ -77,6 +81,12 @@ public class BaseService {
         }
     }
 
+    /**
+     * http获取字节数组
+     * @param uri   http 地址
+     * @return byte[] 数组
+     * @throws IOException 异常
+     */
     public byte[] requestBytes(String uri) throws IOException {
         String url = TiandituService.URI + uri + "&tk=" + tk;
         Request request = new Request.Builder()

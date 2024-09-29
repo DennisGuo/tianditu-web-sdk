@@ -2,11 +2,13 @@ package cn.ghx.tianditu.drive.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 地图显示范围
  */
 @Data
+@NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DriveMapinfo {
     /**

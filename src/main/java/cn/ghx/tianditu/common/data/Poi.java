@@ -1,10 +1,15 @@
 package cn.ghx.tianditu.common.data;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+/**
+ * POI 对象
+ */
 @Data
+@NoArgsConstructor
 public class Poi {
     /**
      * Poi点名称 	String 	必返回

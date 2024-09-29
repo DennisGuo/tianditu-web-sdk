@@ -11,6 +11,10 @@ import java.io.IOException;
  * 根据输入起点、终点和途经点规划查询驾车路线。
  */
 public class DriveService extends BaseService {
+    /**
+     * 构造函数
+     * @param tk 天地图密钥
+     */
     public DriveService(String tk) {
         super(tk);
     }
@@ -18,9 +22,9 @@ public class DriveService extends BaseService {
     /**
      * 根据输入起点、终点和途经点规划查询驾车路线。
      *
-     * @param params
-     * @return
-     * @throws IOException
+     * @param params DriveParams
+     * @return DriveResult
+     * @throws IOException 异常
      */
     public DriveResult getDriveRoutes(DriveParams params) throws IOException {
         String url = "/drive?type=search&postStr=" + gson.toJson(params);

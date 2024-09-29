@@ -2,8 +2,13 @@ package cn.ghx.tianditu.drive.params;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+/**
+ * 路线规划参数
+ */
 @Data
+@NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DriveParams {
     /**

@@ -1,11 +1,13 @@
 package cn.ghx.tianditu.bus.data;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 线路内容
  */
 @Data
+@NoArgsConstructor
 public class SegmentLine {
 
     /**

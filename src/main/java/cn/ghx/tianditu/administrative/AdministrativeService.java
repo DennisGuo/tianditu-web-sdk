@@ -14,11 +14,21 @@ import java.util.List;
  * 提供由行政区划地名、行政区划编码查询中心点、轮廓、所属上级行政区划等信息。
  */
 public class AdministrativeService extends BaseService {
+    /**
+     * 构造函数
+     * @param tk 天地图密钥
+     */
     public AdministrativeService(String tk) {
         super(tk);
     }
 
 
+    /**
+     * 查询行政区划
+     * @param params    AdministrativeParams
+     * @return AdministrativeResult
+     * @throws IOException 异常
+     */
     public AdministrativeResult getAdministrative(AdministrativeParams params) throws IOException {
         List<String> sb = new ArrayList<>();
         String keyword = params.getKeyword();

@@ -8,6 +8,9 @@ import cn.ghx.tianditu.image.StaticImageService;
 import cn.ghx.tianditu.place.PlaceSearchService;
 import org.slf4j.simple.SimpleLogger;
 
+/**
+ * 天地图WEB服务
+ */
 public class TiandituService {
 
 
@@ -33,7 +36,6 @@ public class TiandituService {
      * 获取天地图WEB服务对象
      *
      * @param tk 申请的密钥
-     * @return
      */
     public TiandituService(String tk) {
         this.tk = tk;
@@ -42,7 +44,7 @@ public class TiandituService {
     /**
      * 获取 地名搜索V2.0 服务
      *
-     * @return
+     * @return PlaceSearchService
      */
     public PlaceSearchService getPlaceSearchService() {
         return new PlaceSearchService(tk);
@@ -51,7 +53,7 @@ public class TiandituService {
     /**
      * 地理编码 / 逆地理编码查询 服务
      *
-     * @return
+     * @return GeoCoderService
      */
     public GeoCoderService getGeoCoderService() {
         return new GeoCoderService(tk);
@@ -60,7 +62,7 @@ public class TiandituService {
     /**
      * 行政区划服务V2.0
      *
-     * @return
+     * @return AdministrativeService
      */
     public AdministrativeService getAdministrativeService() {
         return new AdministrativeService(tk);
@@ -69,7 +71,7 @@ public class TiandituService {
     /**
      * 驾车规划服务
      *
-     * @return
+     * @return DriveService
      */
     public DriveService getDriveServiceService() {
         return new DriveService(tk);
@@ -78,7 +80,7 @@ public class TiandituService {
     /**
      * 静态地图API
      *
-     * @return
+     * @return StaticImageService
      */
     public StaticImageService getStaticImageService() {
         return new StaticImageService(tk);
@@ -87,7 +89,7 @@ public class TiandituService {
     /**
      * 公交规划服务
      *
-     * @return
+     * @return BusService
      */
     public BusService getBusService() {
         return new BusService(tk);

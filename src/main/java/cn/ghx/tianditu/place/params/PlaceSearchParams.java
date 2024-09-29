@@ -1,8 +1,13 @@
 package cn.ghx.tianditu.place.params;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+/**
+ * 地址查询参数
+ */
 @Data
+@NoArgsConstructor
 public class PlaceSearchParams {
     /**
      * 【必填】搜索的关键字

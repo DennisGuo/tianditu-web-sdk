@@ -1,11 +1,13 @@
 package cn.ghx.tianditu.common.data;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 针对行政区省（类型3）集合点 	Json 数组 		resultType=3
  */
 @Data
+@NoArgsConstructor
 public class Area {
     /**
      * 名称 	String 	必返回

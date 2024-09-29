@@ -19,10 +19,20 @@ import java.io.IOException;
  */
 public class PlaceSearchService extends BaseService {
 
+    /**
+     * 构造函数
+     * @param tk    天地图密钥
+     */
     public PlaceSearchService(String tk) {
         super(tk);
     }
 
+    /**
+     * 查询地址
+     * @param params PlaceSearchParams
+     * @return PlaceSearchResult
+     * @throws IOException 异常
+     */
     public PlaceSearchResult search(PlaceSearchParams params) throws IOException {
         return sendSearchRequest(params);
     }

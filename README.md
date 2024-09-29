@@ -10,6 +10,19 @@ JAVA 实现的天地图WEB服务API调用SDK
 - 尽可能覆盖所有接口
 - 参数/结果尽可能的还原原始文档说明
 
+## 使用
+
+```shell
+# build.gradle
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+dependencies {
+    implementation 'com.github.DennisGuo:tianditu-web-sdk:master-SNAPSHOT'
+}
+```
+
 ## 接口实现
 
 - [x] 地名搜索V2.0 `PlaceSearchService`
