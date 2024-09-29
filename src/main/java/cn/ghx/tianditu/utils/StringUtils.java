@@ -13,6 +13,7 @@ public class StringUtils {
      * @return boolean 是否为空或则null
      */
     public static boolean hasText(String str) {
-        return (str != null && !str.isBlank());
+        //return (str != null && !str.isBlank());
+        return str != null && !str.trim().isEmpty();
     }
 }

@@ -4,6 +4,10 @@ JAVA 实现的天地图WEB服务API调用SDK
 
 官方文档地址：[http://lbs.tianditu.gov.cn/server/guide.html](http://lbs.tianditu.gov.cn/server/guide.html)
 
+
+[![](https://jitpack.io/v/DennisGuo/tianditu-web-sdk.svg)](https://jitpack.io/#DennisGuo/tianditu-web-sdk)
+
+
 ## 特点
 
 - 简单易用
