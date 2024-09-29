@@ -1,5 +1,7 @@
 package cn.ghx.tianditu;
 
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.Logger;
 import cn.ghx.tianditu.administrative.data.AdministrativeResult;
 import cn.ghx.tianditu.administrative.params.AdministrativeParams;
 import cn.ghx.tianditu.bus.data.BusLineResult;
@@ -16,7 +18,7 @@ import cn.ghx.tianditu.place.params.PlaceSearchParams;
 import com.google.gson.Gson;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.slf4j.simple.SimpleLogger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -33,10 +35,8 @@ class TiandituServiceTest {
         /**
          * 设置日志级别
          */
-        String level = System.getProperty(SimpleLogger.DEFAULT_LOG_LEVEL_KEY);
-        if (level == null) {
-            System.setProperty(org.slf4j.simple.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "TRACE");
-        }
+        Logger logger = (Logger) LoggerFactory.getLogger(Logger.ROOT_LOGGER_NAME);
+        logger.setLevel(Level.ALL);
     }
 
     @BeforeAll

@@ -23,7 +23,7 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 dependencies {
-    implementation 'com.github.DennisGuo:tianditu-web-sdk:1.0.0'
+    implementation 'com.github.DennisGuo:tianditu-web-sdk:1.0.1'
 }
 ```
 

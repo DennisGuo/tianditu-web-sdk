@@ -3,8 +3,8 @@ plugins {
     id("maven-publish")
 }
 
-group = "cn.x-xi.sdk"
-version = "1.0.0"
+group = "com.github.DennisGuo"
+version = "1.0.1"
 
 repositories {
     mavenLocal()
@@ -21,7 +21,7 @@ dependencies {
     compileOnly("org.projectlombok:lombok:1.18.32")
     annotationProcessor("org.projectlombok:lombok:1.18.32")
 
-    testImplementation("org.slf4j:slf4j-simple:2.0.13")
+    testImplementation("ch.qos.logback:logback-classic:1.3.14")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
