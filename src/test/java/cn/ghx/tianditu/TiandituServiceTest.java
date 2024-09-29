@@ -16,6 +16,7 @@ import cn.ghx.tianditu.place.params.PlaceSearchParams;
 import com.google.gson.Gson;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.slf4j.simple.SimpleLogger;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -27,6 +28,16 @@ class TiandituServiceTest {
 
 
     private static TiandituService service;
+
+    static {
+        /**
+         * 设置日志级别
+         */
+        String level = System.getProperty(SimpleLogger.DEFAULT_LOG_LEVEL_KEY);
+        if (level == null) {
+            System.setProperty(org.slf4j.simple.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "TRACE");
+        }
+    }
 
     @BeforeAll
     public static void init() {

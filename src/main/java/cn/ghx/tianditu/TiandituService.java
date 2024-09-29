@@ -6,7 +6,6 @@ import cn.ghx.tianditu.coder.GeoCoderService;
 import cn.ghx.tianditu.drive.DriveService;
 import cn.ghx.tianditu.image.StaticImageService;
 import cn.ghx.tianditu.place.PlaceSearchService;
-import org.slf4j.simple.SimpleLogger;
 
 /**
  * 天地图WEB服务
@@ -16,15 +15,6 @@ public class TiandituService {
 
     public static final String URI = "https://api.tianditu.gov.cn";
 
-    static {
-        /**
-         * 设置日志级别
-         */
-        String level = System.getProperty(SimpleLogger.DEFAULT_LOG_LEVEL_KEY);
-        if (level == null) {
-            System.setProperty(org.slf4j.simple.SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "TRACE");
-        }
-    }
 
     /**
      * 申请的密钥

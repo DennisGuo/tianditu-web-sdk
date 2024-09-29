@@ -6,6 +6,7 @@ import com.fasterxml.jackson.dataformat.xml.deser.FromXmlParser;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -13,6 +14,7 @@ import okhttp3.Response;
 import okhttp3.ResponseBody;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
 
 /**
  * 基础服务
@@ -33,7 +35,7 @@ public class BaseService {
     /**
      * 天地图密钥
      */
-    private String tk;
+    private final String tk;
 
     /**
      * 构造函数
@@ -77,7 +79,8 @@ public class BaseService {
                 mapper.configure(FromXmlParser.Feature.EMPTY_ELEMENT_AS_NULL, true);
                 return mapper.readValue(body, clazz);
             }
-            return (T) body;
+            Type type = TypeToken.get(clazz).getType();
+            return gson.fromJson(body, type);
         }
     }
 

@@ -15,12 +15,13 @@ dependencies {
 
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("com.google.code.gson:gson:2.11.0")
-    implementation("org.slf4j:slf4j-simple:2.0.13")
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.17.1")
+    implementation("org.slf4j:slf4j-api:2.0.13")
 
     compileOnly("org.projectlombok:lombok:1.18.32")
     annotationProcessor("org.projectlombok:lombok:1.18.32")
 
+    testImplementation("org.slf4j:slf4j-simple:2.0.13")
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 }
